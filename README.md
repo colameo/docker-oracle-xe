@@ -39,7 +39,7 @@ cd docker-oracle-xe
 cp ~/Downloads/oracle-database-xe-18c-1.0-1.x86_64.rpm files/
 
 -- Build Image
-docker build -t oracle-xe:18c .
+docker build --build-arg http_proxy=$http_proxy --build-arg https_proxy=$https_proxy -t oracle-xe:18c .
 ```
 
 ## Run Container
